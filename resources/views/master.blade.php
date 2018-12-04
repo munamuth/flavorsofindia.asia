@@ -240,7 +240,7 @@
     		
     		<ul class="main_menu">
     			<li class=""><a href="{{ url('/') }}"><i class="fa fa-home" style="font-size: 25px;"></i> Home</a></li>
-                <li class=""><a href="{{ url('#') }}"><i class="fa fa-info-circle1"></i> About Us</a></li>
+                <li class=""><a href="{{ url('about-us') }}"><i class="fa fa-info-circle1"></i> About Us</a></li>
     			<li class=""><a href="{{ url('#') }}"><i class="fa fa-bed1"></i> Special Offers</a></li>
     			<li class=""><a href="{{ url('#') }}"><i class="fa fa-image1"></i> Menu</a></li>
                 <li class=""><a href="{{ url('#') }}"><i class="fa fa-address-book1"></i> Gallery</a></li>
@@ -273,7 +273,7 @@
 				<div class="footer_title text-warning">Pages</div>
 				<ul style="list-style: none;" class="nav flex-column">
 					<li class="nav-item"><a href="{{ url('/') }}" class="nav-link"><i class="fa fa-link1"></i> Home</a></li>
-					<li class="nav-item"><a href="{{ url('#') }}" class="nav-link"><i class="fa fa-link1"></i> About Us</a></li>
+					<li class="nav-item"><a href="{{ url('about-us') }}" class="nav-link"><i class="fa fa-link1"></i> About Us</a></li>
 					<li><a href="{{ url('#') }}" class="nav-link"><i class="fa fa-link1"></i> Special Offers</a></li>
                     <li><a href="{{ url('#') }}" class="nav-link"><i class="fa fa-link1"></i> Menu</a></li>
                     <li><a href="{{ url('#') }}" class="nav-link"><i class="fa fa-link1"></i> Gallery</a></li>
