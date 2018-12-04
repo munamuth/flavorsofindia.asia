@@ -42,8 +42,7 @@ class SliderController extends Controller
        
         if( $request->hasFile('file') ){
             foreach( $file as $f ){
-                $path = $f->store('slider');
-                $imageName = ImageUpload::imageUpload('public/node_modules/image/slider', $f, 800, 300);
+                $imageName = ImageUpload::imageUpload('/public/node_modules/image/slider', $f, 800, 300);
                 // open file a image resource
                /*  $img = Image::make('public/storage/'.$path);
 
@@ -90,7 +89,7 @@ class SliderController extends Controller
     {
        $file = $request->file;
         if( $request->hasFile('file') ){
-            echo Storage::delete("public/node_modules/image/slider/".$slider->name);
+            File::delete("public/node_modules/image/slider/".$slider->name);
             
             $imageName = ImageUpload::imageUpload('public/node_modules/image/slider', $request->file, 800, 300);
                 
