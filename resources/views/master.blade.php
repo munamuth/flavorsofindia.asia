@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ url('/public/node_modules/owl.carousel/dist/assets/owl.theme.default.css') }}" />
     <!-- Awesome font -->
     <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/font-awesome/css/font-awesome.min.css') }}">
-    <!-- animate css -->
+    <!-- animate css-- -->
     <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/animate.css/animate.min.css') }}">
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i" rel="stylesheet">
