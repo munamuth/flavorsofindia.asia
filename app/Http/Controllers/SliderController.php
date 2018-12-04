@@ -39,16 +39,18 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         $file = $request->file;
+       
         if( $request->hasFile('file') ){
             foreach( $file as $f ){
-                $path = $f->store('/slider');
+                $path = $f->store('slider');
+                $imageName = ImageUpload::imageUpload('public/node_modules/image/slider', $f, 800, 300);
                 // open file a image resource
-                $img = Image::make('/public/storage/'.$path);
+               /*  $img = Image::make('public/storage/'.$path);
 
                 // crop image
                 $img->fit(800, 300);
-                $img->save('/public/storage/'.$path);
-                Slider::insert(['name' => $path,'status_id' => 1, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now() ]);
+                $img->save('public/storage/'.$path); */
+                Slider::insert(['name' => $imageName,'status_id' => 1, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now() ]);
             }
         }
         return back();
@@ -88,15 +90,12 @@ class SliderController extends Controller
     {
        $file = $request->file;
         if( $request->hasFile('file') ){
-            echo Storage::delete($slider->name);
-            $path = $file->store('/slider');
-                // open file a image resource
-                $img = Image::make('/public/storage/'.$path);
+            echo Storage::delete("public/node_modules/image/slider/".$slider->name);
+            
+            $imageName = ImageUpload::imageUpload('public/node_modules/image/slider', $request->file, 800, 300);
+                
 
-                // crop image
-                $img->fit(800, 300);
-                $img->save('/public/storage/'.$path);
-                Slider::where('id', $slider->id)->update(['name' => $path,'status_id' => 1, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now() ]);
+                Slider::where('id', $slider->id)->update(['name' => $imageName,'status_id' => 1, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now() ]);
         }
         return back();
     }

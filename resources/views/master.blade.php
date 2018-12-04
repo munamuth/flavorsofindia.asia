@@ -13,18 +13,18 @@
 
     <!-- Fonts -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" type="text/css" href="{{ url('/node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url('/node_modules/owl.carousel/dist/assets/owl.carousel.min.css') }}" />
-    <link rel="stylesheet" href="{{ url('/node_modules/owl.carousel/dist/assets/owl.theme.default.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url('/public/node_modules/owl.carousel/dist/assets/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ url('/public/node_modules/owl.carousel/dist/assets/owl.theme.default.css') }}" />
     <!-- Awesome font -->
-    <link rel="stylesheet" type="text/css" href="{{ url('/node_modules/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/font-awesome/css/font-awesome.min.css') }}">
     <!-- animate css -->
-    <link rel="stylesheet" type="text/css" href="{{ url('/node_modules/animate.css/animate.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/animate.css/animate.min.css') }}">
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i" rel="stylesheet">
     <!-- AOS Animate -->
-    <link rel="stylesheet" type="text/css" href="{{ url('/node_modules/aos/dist/aos.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url('/node_modules/flag-icon-css/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/aos/dist/aos.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/flag-icon-css/css/flag-icon.min.css') }}">
     <style type="text/css">
         *{
             font-family: 'Lato', sans-serif;
@@ -44,7 +44,7 @@
     		background: #fff200;
     		z-index: 100;
     		float: left;
-			border-bottom: solid 1px #fff;
+			border-bottom: dotted 2px #fff;
     	}
     	.header_left{
             display: flex;
@@ -92,11 +92,12 @@
     	ul.main_menu li a:hover
     	{
     		border-bottom: solid 2px Orange;
+			color: orange;
     	}
     	ul.main_menu li a
     	{
     		padding:15px;
-    		color: Orange;
+    		color: #0f6100;
     		text-decoration: none;
     		font-weight: 500;
     	}
@@ -268,7 +269,7 @@
                      <li class="nav-item"><a href="meailto: Email@websitename.com" class="nav-link"><i class="fa fa-envelope"></i> Email@websitename.com</a></li>
                 </ul>
 			</div> -->
-			<div class="col-12 col-sm-12 order-12 order-sm-2  col-md-6">
+			<div class="col-12 col-sm-12 order-12 order-sm-2  col-md-3">
 				<div class="footer_title text-warning">Pages</div>
 				<ul style="list-style: none;" class="nav flex-column">
 					<li class="nav-item"><a href="{{ url('/') }}" class="nav-link"><i class="fa fa-link1"></i> Home</a></li>
@@ -279,13 +280,33 @@
 					<li><a href="{{ url('#') }}" class="nav-link"><i class="fa fa-link1"></i> Branches</a></li>
 				</ul>
 			</div>
-			<!-- <div class="col-12 col-sm- order-2  order-sm-3 col-md-3">
-				<div class="footer_title text-warning">Our Rooms</div>
-                <ul class="nav flex-column">
-                    
-                </ul>
-			</div> -->
-			<div class="col-12 col-sm-6 order-1  order-sm-3 col-md-6">
+			<div class="col-12 col-sm- order-2  order-sm-3 col-md-6">
+				<div class="footer_title text-warning">Flavors Of India (Cambodia)</div>
+                <div class="row">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-12 col-sm-4 font-weight-bold">@ Phnom Penh :</div>
+							<div class="col-12 col-sm-8">#158, St 63, Phnom Penh<br>023 990 455, 012 886 374</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-12 col-sm-4 font-weight-bold">@ Battambang :</div>
+							<div class="col-12 col-sm-8">#301-302, St 121, Svay Por Commune, Battambang
+								<br>
+									053 731 553</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-12 col-sm-4 font-weight-bold">@ Siem Reap :</div>
+							<div class="col-12 col-sm-8">#255, St Soksan, Steong Thmey Village, Svay Dangkhum, Siem Reap
+								<br>
+									063 765 900
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 order-1  order-sm-3 col-md-3">
 				<div class="footer_title text-warning">Follow Us</div>
 				<div class="social" style="padding-left: 15px;">
 					<div style="width: 80%; margin: auto;">
@@ -329,12 +350,12 @@ new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_el
 
 
 
- 	<link rel="stylesheet" src="{{ url('/node_modules/jquery-ui/themes/base/theme.css') }}">
+ 	<link rel="stylesheet" src="{{ url('/public/node_modules/jquery-ui/themes/base/theme.css') }}">
   	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="{{ url('/node_modules/owl.carousel/dist/owl.carousel.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url('/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url('/node_modules/aos/dist/aos.js') }}"></script>
+    <script src="{{ url('/public/node_modules/owl.carousel/dist/owl.carousel.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url('/public/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url('/public/node_modules/aos/dist/aos.js') }}"></script>
     @yield('script')
     <script type="text/javascript">
     	$('.menu_bar').click( function() {

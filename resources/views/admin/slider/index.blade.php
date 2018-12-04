@@ -39,7 +39,7 @@
 			@foreach( $sliders as $slider)
 				<div class="col-12 col-sm-4" style="margin-bottom: 30px;">
 					<div class="img_background" style="width: 100%; position: relative;">
-						<img src="{{ url('storage/'.$slider->name) }}" class="img-fluid">
+						<img src="{{ url('public/node_modules/image/slider/'.$slider->name) }}" class="img-fluid">
 						<div class="action_button">
 							<button class="btn btn-danger btn-sm" onclick="btnChange_Click({{ $slider->id }})"><i class="">Change</i></button>
 							<button class="btn btn-danger btn-sm" onclick="btnRemove_Click({{ $slider->id }})"><i class="">Remove</i></button>
@@ -70,6 +70,7 @@
 
 @section('script')
 	<script type="text/javascript">
+		var imgUrl = "{{ url('/admin/slider/') }}/";
 		$('#btnAdd').click( function(data){
 			$('#form_file').find('input[type="file"]').trigger('click');
 		});
@@ -79,7 +80,7 @@
 
 		function btnChange_Click(id)
 		{
-			$('#form_file_update').prop('action', '/admin/slider/'+id);
+			$('#form_file_update').prop('action', imgUrl + id);
 			$('#form_file_update').find('input[type="file"]').trigger('click');
 		}
 		$('#form_file_update').find('input[type="file"]').change( function(){
@@ -88,7 +89,7 @@
 
 		function btnRemove_Click(id)
 		{
-			$('#form_file_delete').prop('action', '/admin/slider/'+id);
+			$('#form_file_delete').prop('action', imgUrl +id);
 			$('#form_file_delete').submit();
 		}
 

@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>Admin - V Boutique</title>
-	<link rel="stylesheet" type="text/css" href="{{ url('/node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ url('/node_modules/font-awesome/css/font-awesome.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/font-awesome/css/font-awesome.min.css') }}">
 
 	<style type="text/css">
 		html, body{
@@ -89,8 +89,8 @@
 	</div>
 
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script type="text/javascript" src="{{ url('/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-	<script type="text/javascript" src="{{ url('node_modules/tinymce/tinymce.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url('/public/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url('/public/node_modules/tinymce/tinymce.min.js') }}"></script>
 	<script type="text/javascript">
 		$(document).ready( function(){
 			$('.menu-bars').click( function(){

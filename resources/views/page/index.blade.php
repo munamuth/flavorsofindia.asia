@@ -49,11 +49,11 @@
 		  	@foreach( $sliders as $index => $slider)
 		  		@if( $index == 0 )
 			    <div class="carousel-item active">
-			      <img class="d-block w-100" src="{{ url('/public/storage/'.$slider->name) }}" alt="First slide">
+			      <img class="d-block w-100" src="{{ url('public/node_modules/image/slider/'.$slider->name) }}" alt="First slide">
 			    </div>
 			    @else
 			    <div class="carousel-item">
-			      <img class="d-block w-100" src="{{ url('/public/storage/'.$slider->name) }}" alt="First slide">
+			      <img class="d-block w-100" src="{{ url('public/node_modules/image/slider/'.$slider->name) }}" alt="First slide">
 			    </div>
 			    @endif
 			@endforeach
