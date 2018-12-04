@@ -14,7 +14,7 @@
     <!-- Fonts -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css"> -->
     <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url('/public/node_modules/owl.carousel/dist/assets/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ url('/public/node_modules/owl.carousel/dist/assets/owl.carousel.min.css') }} " />
     <link rel="stylesheet" href="{{ url('/public/node_modules/owl.carousel/dist/assets/owl.theme.default.css') }}" />
     <!-- Awesome font -->
     <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/font-awesome/css/font-awesome.min.css') }}">
