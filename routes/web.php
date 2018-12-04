@@ -19,7 +19,6 @@ Route::middleware(['web'])->group(function () {
 	Route::get('/rooms/read_more/room_id={id}', 'PageController@roomReadMore');
 	Route::get('/gallery', 'PageController@gallery');
 	Route::get('/contact_us', 'PageController@contact');
-
 });
 
 Route::middleware(['auth'])->group(function () {
