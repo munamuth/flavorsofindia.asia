@@ -15,10 +15,10 @@
 Route::middleware(['web'])->group(function () {
 	Route::get('/', 'PageController@index');
 	Route::get('/about-us', 'PageController@about');	
-	Route::get('/rooms', 'PageController@rooms');
-	Route::get('/rooms/read_more/room_id={id}', 'PageController@roomReadMore');
+	Route::get('/special-offer', 'PageController@specialOffer');
+	Route::get('/menu', 'PageController@menu');
 	Route::get('/gallery', 'PageController@gallery');
-	Route::get('/contact_us', 'PageController@contact');
+	Route::get('/branches', 'PageController@branches');
 });
 
 Route::middleware(['auth'])->group(function () {

@@ -41,14 +41,10 @@ class GalleryController extends Controller
        $file = $request->file;
         if( $request->hasFile('file') ){
             foreach( $file as $f ){
-                $path = $f->store('/gallery');
-                // open file a image resource
-                $img = Image::make('storage/'.$path);
-
-                // crop image
-                $img->fit(600, 500);
-                $img->save('storage/'.$path);
-                Gallery::insert(['name' => $path,'photo' => $path, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now() ]);
+            
+            $imageName = ImageUpload::imageUpload('public/node_modules/image/gallery', $f, 600, 500);
+                
+                Gallery::insert(['name' => $imageName,'photo' => $imageName, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now() ]);
             }
         }
         return back();
@@ -88,14 +84,8 @@ class GalleryController extends Controller
         $file = $request->file;
         if( $request->hasFile('file') ){
             echo Storage::delete($gallery->name);
-            $path = $file->store('/gallery');
-                // open file a image resource
-                $img = Image::make('storage/'.$path);
-
-                // crop image
-                $img->fit(600, 500);
-                $img->save('storage/'.$path);
-                Gallery::where('id', $gallery->id)->update(['name' => $path,'photo' => $path, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now() ]);
+            $imageName = ImageUpload::imageUpload('public/node_modules/image/gallery', $request->file, 600, 500);
+            Gallery::where('id', $gallery->id)->update(['name' => $imageName,'photo' => $imageName, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now() ]);
         }
         return back();
     }

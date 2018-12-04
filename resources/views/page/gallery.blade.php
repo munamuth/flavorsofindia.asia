@@ -31,7 +31,7 @@
 	<div class="row">
 		@foreach($gallery as $i => $g)
 		<div class="col-12 col-sm-4 zoom" style="margin-bottom: 30px;">
-			<img src="{{ url('storage/'.$g->photo) }}" class="img-fluid" data-aos="flip-left">
+			<img src="{{ url('public/node_modules/image/gallery/'.$g->photo) }}" class="img-fluid" data-aos="flip-left">
 		</div>
 		@endforeach
 	</div>

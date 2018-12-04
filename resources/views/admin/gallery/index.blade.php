@@ -42,7 +42,7 @@
 	<div class="row card-body">
 		@foreach( $gallery as $g)
 		<div class="col-6 col-sm-3 zoom" style="margin-bottom: 30px">
-			<img src="{{ url('storage/'.$g->photo) }}" class="img-fluid">
+			<img src="{{ url('public/node_modules/image/gallery/'.$g->photo) }}" class="img-fluid">
 			<div class="action_button">
 				<button class="btn btn-danger btn-sm" onclick="btnChange_click({{ $g->id}})"><i>Change</i></button>
 				<button class="btn btn-danger btn-sm" onclick="btnRemove_click({{ $g->id }})"><i>Remove</i></button>
@@ -72,6 +72,7 @@
 
 @section('script')
 	<script type="text/javascript">
+		var mUrl = '{{ url("/admin/gallery") }}/';
 		$('#btnAdd').click( function() {
 			$('#form_store').find('input[type="file"]').trigger('click');
 		});
@@ -80,7 +81,7 @@
 		});
 
 		function btnChange_click( id ){
-			$('#form_update').prop('action', '/admin/gallery/'+id)
+			$('#form_update').prop('action', mUrl + id)
 			$('#form_update').find('input[type="file"]').trigger('click');
 		}
 		$('#form_update').find('input[type="file"]').change( function() {
@@ -88,7 +89,7 @@
 		})
 
 		function btnRemove_click( id ){
-			$('#form_destroy').prop('action', '/admin/gallery/'+id)
+			$('#form_destroy').prop('action', mUrl + id)
 			$('#form_destroy').submit();
 		}
 	</script>

@@ -18,17 +18,14 @@ class PageController extends Controller
     	return view('page.index', compact('sliders', 'rooms'));
     }
 
-    public function rooms()
+    public function specialOffer()
     {
-        $rtypes = RoomType::where('status_id', 1)->get();
-    	return view('page.rooms', compact('rtypes'));
+    	return view('page.specialOffer');
     }
 
-    public function roomReadMore( $id )
+    public function menu( )
     {
-        $rtype = RoomType::find($id);
-        $related = RoomType::where('id', '!=', $id)->inRandomOrder()->take(2)->get();
-        return view('page.pageDetails', compact('rtype', 'related'));
+        return view('page.menu');
     }
 
     public function gallery()
@@ -37,9 +34,9 @@ class PageController extends Controller
     	return view('page.gallery', compact('gallery'));
     }
 
-    public function newsAndEvents()
+    public function branches()
     {
-    	return view('page.newsandevents');
+    	return view('page.branches');
     }
 
     public function contact()

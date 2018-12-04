@@ -241,10 +241,10 @@
     		<ul class="main_menu">
     			<li class=""><a href="{{ url('/') }}"><i class="fa fa-home" style="font-size: 25px;"></i> Home</a></li>
                 <li class=""><a href="{{ url('about-us') }}"><i class="fa fa-info-circle1"></i> About Us</a></li>
-    			<li class=""><a href="{{ url('#') }}"><i class="fa fa-bed1"></i> Special Offers</a></li>
-    			<li class=""><a href="{{ url('#') }}"><i class="fa fa-image1"></i> Menu</a></li>
-                <li class=""><a href="{{ url('#') }}"><i class="fa fa-address-book1"></i> Gallery</a></li>
-    			<li class=""><a href="{{ url('#') }}"><i class="fa fa-address-book1"></i> Branches</a></li>
+    			<li class=""><a href="{{ url('/special-offer') }}"><i class="fa fa-bed1"></i> Special Offers</a></li>
+    			<li class=""><a href="{{ url('/menu') }}"><i class="fa fa-image1"></i> Menu</a></li>
+                <li class=""><a href="{{ url('/gallery') }}"><i class="fa fa-address-book1"></i> Gallery</a></li>
+    			<li class=""><a href="{{ url('/branches') }}"><i class="fa fa-address-book1"></i> Branches</a></li>
     		</ul>
     	</div>
     		
@@ -274,10 +274,10 @@
 				<ul style="list-style: none;" class="nav flex-column">
 					<li class="nav-item"><a href="{{ url('/') }}" class="nav-link"><i class="fa fa-link1"></i> Home</a></li>
 					<li class="nav-item"><a href="{{ url('about-us') }}" class="nav-link"><i class="fa fa-link1"></i> About Us</a></li>
-					<li><a href="{{ url('#') }}" class="nav-link"><i class="fa fa-link1"></i> Special Offers</a></li>
-                    <li><a href="{{ url('#') }}" class="nav-link"><i class="fa fa-link1"></i> Menu</a></li>
-                    <li><a href="{{ url('#') }}" class="nav-link"><i class="fa fa-link1"></i> Gallery</a></li>
-					<li><a href="{{ url('#') }}" class="nav-link"><i class="fa fa-link1"></i> Branches</a></li>
+					<li><a href="{{ url('/special-offer') }}" class="nav-link"><i class="fa fa-link1"></i> Special Offers</a></li>
+                    <li><a href="{{ url('/menu') }}" class="nav-link"><i class="fa fa-link1"></i> Menu</a></li>
+                    <li><a href="{{ url('/gallery') }}" class="nav-link"><i class="fa fa-link1"></i> Gallery</a></li>
+					<li><a href="{{ url('/branches') }}" class="nav-link"><i class="fa fa-link1"></i> Branches</a></li>
 				</ul>
 			</div>
 			<div class="col-12 col-sm- order-2  order-sm-3 col-md-6">
