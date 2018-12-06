@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin - V Boutique</title>
+	<title>Flavors of India | Admin</title>
 	<link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/bootstrap/dist/css/bootstrap.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/font-awesome/css/font-awesome.min.css') }}">
 
@@ -78,7 +78,7 @@
 		<div class="body-left">
 			<ul class="menu">
 				<li><a href="/admin">Dashboard</a></li>
-				<li><a href="#">Slider</a></li>
+				<li><a href="{{ url('/admin/slider') }}">Slider</a></li>
 				<li><a href="#">Dashboard</a></li>
 				<li><a href="#">Dashboard</a></li>
 			</ul>

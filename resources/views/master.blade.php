@@ -133,7 +133,11 @@
     		font-size: 24px;
     	}
 
-    	@media screen and (max-width: 925px) {
+    	@media screen and (max-width: 996px) {
+			.con{
+				padding-left:0;
+				padding-right:0;
+			}
     		.header_left,.header_right{
     			width: 100%;
     			padding-right: 0;
@@ -147,7 +151,8 @@
     			display: none;
     			width: 100%;
     			line-height: normal;
-    			background: #a29e9e11;
+    			background: transparent;
+				border-top: dotted 2px #fff;
     		}
     		ul.main_menu li a {
 
@@ -160,12 +165,20 @@
 			}
     	}
     	@media screen and (max-width: 631px) {
+			ul.main_menu{
+				border: none;
+			}
     		ul.main_menu li:first-child{
-    			border-top:solid 1px #fff; 
+    			border-top:inset 1px #fff; 
     		}
             ul.main_menu li a{
                   width: 100%;
             }
+			ul.main_menu li a:hover
+    	{
+    		border-bottom: 0;
+			color: orange;
+    	}
     		ul.main_menu li {
     			width: 100%;
     			border-bottom: solid 1px #fff;
@@ -225,7 +238,7 @@
             
     </div>
     <div class="header">
-        <div class="container-fluid">
+        <div class="container-fluid con">
     	<div class="header_left">
     		<div class="logo">
                 <a href="{{ url('/') }}">
@@ -269,7 +282,7 @@
                      <li class="nav-item"><a href="meailto: Email@websitename.com" class="nav-link"><i class="fa fa-envelope"></i> Email@websitename.com</a></li>
                 </ul>
 			</div> -->
-			<div class="col-12 col-sm-12 order-12 order-sm-2  col-md-3">
+			<div class="col-12 col-sm-12 order-1 order-sm-3  col-md-3">
 				<div class="footer_title text-warning">Pages</div>
 				<ul style="list-style: none;" class="nav flex-column">
 					<li class="nav-item"><a href="{{ url('/') }}" class="nav-link"><i class="fa fa-link1"></i> Home</a></li>
@@ -306,7 +319,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12 col-sm-6 order-1  order-sm-3 col-md-3">
+			<div class="col-12 col-sm-12 order-1  order-sm-3 col-md-3">
 				<div class="footer_title text-warning">Follow Us</div>
 				<div class="social" style="padding-left: 15px;">
 					<div style="width: 80%; margin: auto;">
