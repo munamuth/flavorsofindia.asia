@@ -68,9 +68,60 @@
 		    <span class="sr-only">Next</span>
 		  </a>
 		</div>
+        <br>
+
+
 
 
 </div>
+@endsection
+@section('body')
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-3">
+                 <fieldset style="border: dotted 1px; padding:inherit; margin: inherit;">
+                    <legend style="width: auto; font-size: inherit;">Personalia:</legend>
+                    <q>
+                        Review here
+                    </q>
+                </fieldset>
+            </div>
+            <div class="col-12 col-sm-3">
+                <fieldset style="border: dotted 1px; padding:inherit; margin: inherit;">
+                    <legend style="width: auto; font-size: inherit;">Personalia:</legend>
+                    <q>
+                        Review here
+                    </q>
+                </fieldset>
+            </div>
+            <div class="col-12 col-sm-3">
+                <fieldset style="border: dotted 1px; padding:inherit; margin: inherit;">
+                    <legend style="width: auto; font-size: inherit;">Personalia:</legend>
+                    <q>
+                        Review here
+                    </q>
+                </fieldset>
+            </div>
+            <div class="col-12 col-sm-3">
+                <fieldset style="border: dotted 1px; padding:inherit; margin: inherit;">
+                    <legend style="width: auto; font-size: inherit;">Personalia:</legend>
+                    <q>
+                        Review here
+                    </q>
+                </fieldset>
+            </div>
+            <div class="col-12 col-sm-3">
+                <fieldset style="border: dotted 1px; padding:inherit; margin: inherit;">
+                    <legend style="width: auto; font-size: inherit;">Personalia:</legend>
+                    <q>
+                        Review here
+                    </q>
+                    <iframe src="https://goo.gl/maps/tVu1jdBhKRo" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </fieldset>
+            </div>
+        </div>
+        <br>
+    </div>
 @endsection
 
 @section('script')

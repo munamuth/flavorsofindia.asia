@@ -41,7 +41,7 @@
         }
     	.header{
     		width: 100%;
-    		background: #fff200;
+    		background: #fff;
     		z-index: 100;
     		float: left;
 			border-bottom: dotted 2px #fff;
@@ -49,9 +49,7 @@
     	.header_left{
             display: flex;
     		width: 30%;
-    		padding-left: 5%;
     		float: left;
-            line-height: 133.5px;
     	}
     	.logo{
             width: 100%;
@@ -59,24 +57,27 @@
     	}
     	.menu_bar{
     		display: none;
-    		line-height: 136.5px;
-    		font-size: 40px;
     		color: Orange;
     		padding-right: 15px;
     		float: right;
     	}
     	.header_right{
+            position: relative;
     		width: 70%;
     		padding-right: 5%;
     		float: left;
     	}
+        .social_link_header{
+                padding-bottom: 55px;
+            }
     	ul.main_menu
     	{
+            bottom: 20px;
+            width: 100%;
+            float: left;
     		list-style: none; 
     		padding: 0;     		
     		margin: 0;
-    		line-height: 133.5px;
-    		float: right;
     	}
     	ul.main_menu li
     	{
@@ -99,7 +100,7 @@
     		padding:15px;
     		color: #0f6100;
     		text-decoration: none;
-    		font-weight: 500;
+    		font-weight: 900;
     	}
 
     	.body{
@@ -125,8 +126,8 @@
     	.footer_bottom{
     		width: 100%;
     		text-align: center;
-    		padding: 15px;
-    		background: Orange;
+    		padding: 10px;
+    		background: #61615e;
     	}
     	.social_link a{
     		padding: 0 5px;
@@ -141,18 +142,22 @@
     		.header_left,.header_right{
     			width: 100%;
     			padding-right: 0;
+                z-index: 100;
+                background: #fff;
     		}
     		.menu_bar{
     			display: block;
     		}
-
+            .social_link_header{
+                padding-bottom: 0;
+            }
 
     		ul.main_menu{
     			display: none;
     			width: 100%;
     			line-height: normal;
     			background: transparent;
-				border-top: dotted 2px #fff;
+				border-top: dotted 2px #fff200;
     		}
     		ul.main_menu li a {
 
@@ -173,6 +178,7 @@
     		}
             ul.main_menu li a{
                   width: 100%;
+                  text-align: center;
             }
 			ul.main_menu li a:hover
     	{
@@ -216,48 +222,38 @@
     @yield('head')
 </head>
 <body>
-    <div class="top skiptranslate d-none">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-6 d-none d-sm-block">
-                    <ul class="language_bar" style="float: left;">
-                        <li><a href="tel:0">+855 23 123 123</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-sm-6">
-                    <ul class="language_bar">
-                        <li>
-                            <a href="#googtrans(en|en)" class="language"><span class="flag-icon flag-icon-gb"></span> English</a>
-                            <a href="#googtrans(en|km)" class="language"><span class="flag-icon flag-icon-kh"></span> ភាសាខ្មែរ</span></a>
-                            <a href="#googtrans(en|zh-CN)" class="language"><span class="flag-icon flag-icon-cn"></span> 中文</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-            
-    </div>
+   
+
     <div class="header">
-        <div class="container-fluid con">
+        <div class="con">
     	<div class="header_left">
     		<div class="logo">
                 <a href="{{ url('/') }}">
-    			<img src="{{ url('/public/node_modules/logo/logo.png') }}" style="width: 90%" class="img-fluid">
+    		      <img src="{{ url('/public/node_modules/logo/logo.png') }}" style="width: 90%" class="img-fluid">
                 </a>
     		</div>
-    		<div class="menu_bar">
-    			<i class="fa fa-bars fa-times"></i>
-    		</div>
+    		
     	</div>
     	<div class="header_right">
-    		
+            <div class="menu_bar">
+                
+            </div>
+            <div class="social_link social_link_header text-right" style="margin: auto;">
+                <a href="#" class="text-warning float-left menu_bar"><i class="fa fa-bars fa-times"></i></a>
+                <a href="https://www.fb.com/" class="text-secondary"><i class="fa fa-tripadvisor"></i></a>
+                <a href="https://www.fb.com/" class="text-primary"><i class="fa fa-facebook-square"></i></a>
+                <a href="#" class="text-danger"><i class="fa fa-instagram"></i></a>
+                <a href="#" class="text-info"><i class="fa fa-twitter-square"></i></a>
+                <a href="#" class="text-warning"><i class="fa fa-google"></i></a>
+            </div>
+
     		<ul class="main_menu">
-    			<li class=""><a href="{{ url('/') }}"><i class="fa fa-home" style="font-size: 25px;"></i> Home</a></li>
+    			<li class=""><a href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a></li>
                 <li class=""><a href="{{ url('about-us') }}"><i class="fa fa-info-circle1"></i> About Us</a></li>
-    			<li class=""><a href="{{ url('/special-offer') }}"><i class="fa fa-bed1"></i> Special Offers</a></li>
+    			<li class=""><a href="{{ url('/special-offer') }}"><i class="fa fa-bed1"></i> Our Special</a></li>
     			<li class=""><a href="{{ url('/menu') }}"><i class="fa fa-image1"></i> Menu</a></li>
                 <li class=""><a href="{{ url('/gallery') }}"><i class="fa fa-address-book1"></i> Gallery</a></li>
-    			<li class=""><a href="{{ url('/branches') }}"><i class="fa fa-address-book1"></i> Branches</a></li>
+    			<li class=""><a href="{{ url('/branches') }}"><i class="fa fa-address-book1"></i> Our Branches</a></li>
     		</ul>
     	</div>
     		
@@ -287,10 +283,10 @@
 				<ul style="list-style: none;" class="nav flex-column">
 					<li class="nav-item"><a href="{{ url('/') }}" class="nav-link"><i class="fa fa-link1"></i> Home</a></li>
 					<li class="nav-item"><a href="{{ url('about-us') }}" class="nav-link"><i class="fa fa-link1"></i> About Us</a></li>
-					<li><a href="{{ url('/special-offer') }}" class="nav-link"><i class="fa fa-link1"></i> Special Offers</a></li>
+					<li><a href="{{ url('/special-offer') }}" class="nav-link"><i class="fa fa-link1"></i> Our Special</a></li>
                     <li><a href="{{ url('/menu') }}" class="nav-link"><i class="fa fa-link1"></i> Menu</a></li>
                     <li><a href="{{ url('/gallery') }}" class="nav-link"><i class="fa fa-link1"></i> Gallery</a></li>
-					<li><a href="{{ url('/branches') }}" class="nav-link"><i class="fa fa-link1"></i> Branches</a></li>
+					<li><a href="{{ url('/branches') }}" class="nav-link"><i class="fa fa-link1"></i> Our Branches</a></li>
 				</ul>
 			</div>
 			<div class="col-12 col-sm- order-2  order-sm-3 col-md-6">
@@ -327,18 +323,16 @@
 					</div>
 					<div class="social_link text-center" style="margin: auto;">
 						<a href="https://www.fb.com/"><i class="fa fa-facebook-square"></i></a>
-						<a href="#"><i class="fa fa-twitter-square"></i></a>
 						<a href="#"><i class="fa fa-instagram"></i></a>
-						<a href="weixin://dl/chat?laiping133"><i class="fa fa-wechat"></i></a>
-						<a href="#"><i class="fa fa-linkedin-square"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square"></i></a>
+                        <a href="#" class=""><i class="fa fa-google"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="footer_bottom">
-		Flavors Of India Asia &copy{{ Date('Y')}}
-        
+		<code class="font-weight-bold text-light">Flavors Of India Asia &copy{{ Date('Y')}} All Right Reserve</code>        
 	</div>
     
 </div>
