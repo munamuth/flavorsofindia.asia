@@ -21,12 +21,13 @@ Route::middleware(['web'])->group(function () {
 	Route::get('/branches', 'PageController@branches');
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['web'])->group(function () {
 	Route::get('/admin', function(){
 		return view('admin.dashboard');
 	});
 	Route::resource('/admin/slider', 'SliderController');
-	Route::resource('/admin/room_type', 'RoomTypeController');
+	Route::resource('/admin/about_Us', 'AboutController');
+	Route::resource('/admin/menu', 'MenuController');
 	Route::resource('/admin/facility', 'FacilityController');
 	Route::resource('/admin/gallery', 'GalleryController');
 	Route::resource('/admin/photo', 'PhotoController');

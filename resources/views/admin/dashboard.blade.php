@@ -27,7 +27,7 @@
 			<a href="{{ url('/admin/slider') }}">Slider</a>
 		</div>
 		<div class="box">
-			<a href="{{ route('room_type.index') }}">Room Types</a>
+			<a href="{{ route('menu.index') }}">Menu</a>
 		</div>
 		<div class="box">
 			<a href="{{ url('/admin/about_Us') }}">About US</a>

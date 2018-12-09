@@ -6,12 +6,14 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\About' => $baseDir . '/app/About.php',
     'App\\AddUser' => $baseDir . '/app/AddUser.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Email' => $baseDir . '/app/Email.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Facility' => $baseDir . '/app/Facility.php',
     'App\\Gallery' => $baseDir . '/app/Gallery.php',
+    'App\\Http\\Controllers\\AboutController' => $baseDir . '/app/Http/Controllers/AboutController.php',
     'App\\Http\\Controllers\\AddUserController' => $baseDir . '/app/Http/Controllers/AddUserController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -22,8 +24,10 @@ return array(
     'App\\Http\\Controllers\\EmailController' => $baseDir . '/app/Http/Controllers/EmailController.php',
     'App\\Http\\Controllers\\FacilityController' => $baseDir . '/app/Http/Controllers/FacilityController.php',
     'App\\Http\\Controllers\\GalleryController' => $baseDir . '/app/Http/Controllers/GalleryController.php',
+    'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\IconCategoryController' => $baseDir . '/app/Http/Controllers/IconCategoryController.php',
     'App\\Http\\Controllers\\IconController' => $baseDir . '/app/Http/Controllers/IconController.php',
+    'App\\Http\\Controllers\\ImageUpload' => $baseDir . '/app/Http/Controllers/ImageUpload.php',
     'App\\Http\\Controllers\\PageController' => $baseDir . '/app/Http/Controllers/PageController.php',
     'App\\Http\\Controllers\\PhoneNumberController' => $baseDir . '/app/Http/Controllers/PhoneNumberController.php',
     'App\\Http\\Controllers\\PhotoController' => $baseDir . '/app/Http/Controllers/PhotoController.php',
@@ -46,6 +50,7 @@ return array(
     'App\\Icon' => $baseDir . '/app/Icon.php',
     'App\\IconCategory' => $baseDir . '/app/IconCategory.php',
     'App\\Mail\\SendEmail' => $baseDir . '/app/Mail/SendEmail.php',
+    'App\\Menu' => $baseDir . '/app/Menu.php',
     'App\\PhoneNumber' => $baseDir . '/app/PhoneNumber.php',
     'App\\Photo' => $baseDir . '/app/Photo.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

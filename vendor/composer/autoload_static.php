@@ -371,12 +371,14 @@ class ComposerStaticInit7d93e670f323cc3280224c562364b2c1
     );
 
     public static $classMap = array (
+        'App\\About' => __DIR__ . '/../..' . '/app/About.php',
         'App\\AddUser' => __DIR__ . '/../..' . '/app/AddUser.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Email' => __DIR__ . '/../..' . '/app/Email.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Facility' => __DIR__ . '/../..' . '/app/Facility.php',
         'App\\Gallery' => __DIR__ . '/../..' . '/app/Gallery.php',
+        'App\\Http\\Controllers\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/AboutController.php',
         'App\\Http\\Controllers\\AddUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/AddUserController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -387,8 +389,10 @@ class ComposerStaticInit7d93e670f323cc3280224c562364b2c1
         'App\\Http\\Controllers\\EmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmailController.php',
         'App\\Http\\Controllers\\FacilityController' => __DIR__ . '/../..' . '/app/Http/Controllers/FacilityController.php',
         'App\\Http\\Controllers\\GalleryController' => __DIR__ . '/../..' . '/app/Http/Controllers/GalleryController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\IconCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/IconCategoryController.php',
         'App\\Http\\Controllers\\IconController' => __DIR__ . '/../..' . '/app/Http/Controllers/IconController.php',
+        'App\\Http\\Controllers\\ImageUpload' => __DIR__ . '/../..' . '/app/Http/Controllers/ImageUpload.php',
         'App\\Http\\Controllers\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/PageController.php',
         'App\\Http\\Controllers\\PhoneNumberController' => __DIR__ . '/../..' . '/app/Http/Controllers/PhoneNumberController.php',
         'App\\Http\\Controllers\\PhotoController' => __DIR__ . '/../..' . '/app/Http/Controllers/PhotoController.php',
@@ -411,6 +415,7 @@ class ComposerStaticInit7d93e670f323cc3280224c562364b2c1
         'App\\Icon' => __DIR__ . '/../..' . '/app/Icon.php',
         'App\\IconCategory' => __DIR__ . '/../..' . '/app/IconCategory.php',
         'App\\Mail\\SendEmail' => __DIR__ . '/../..' . '/app/Mail/SendEmail.php',
+        'App\\Menu' => __DIR__ . '/../..' . '/app/Menu.php',
         'App\\PhoneNumber' => __DIR__ . '/../..' . '/app/PhoneNumber.php',
         'App\\Photo' => __DIR__ . '/../..' . '/app/Photo.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
