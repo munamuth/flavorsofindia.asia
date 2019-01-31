@@ -20,17 +20,33 @@ Route::middleware(['web'])->group(function () {
 	Route::get('/gallery', 'PageController@gallery');
 	Route::get('/branches', 'PageController@branches');
 });
-
-Route::middleware(['web'])->group(function () {
+Route::get('/admin/login', function(){
+		return view('admin.user.login');
+	});
+Route::middleware(['auth'])->group(function () {
 	Route::get('/admin', function(){
 		return view('admin.dashboard');
 	});
+	
 	Route::resource('/admin/slider', 'SliderController');
-	Route::resource('/admin/about_Us', 'AboutController');
+	Route::resource('/admin/home_description', 'HomeDescriptionController');
+
+
+	Route::resource('/admin/about_us', 'AboutController');
 	Route::resource('/admin/menu', 'MenuController');
-	Route::resource('/admin/facility', 'FacilityController');
+	Route::post('/admin/menu/changephoto1/{id}', 'MenuController@changPhoto1');
+	Route::post('/admin/menu/changephoto2/{id}', 'MenuController@changPhoto2');
+
+	
+	Route::resource('/admin/special', 'SpecialController');
+	Route::resource('/admin/branch', 'BranchController');
+	Route::post('/admin/branch/changephoto/{id}', 'BranchController@changPhoto');
+
 	Route::resource('/admin/gallery', 'GalleryController');
-	Route::resource('/admin/photo', 'PhotoController');
+	Route::resource('/admin/history', 'HistoryController');
+	Route::resource('/admin/review', 'ReviewController');
+	Route::resource('/admin/users', 'UserController');
+	Route::post('/admin/users/changepassword/{id}', 'UserController@changepassword');
 
 });
 Auth::routes();

@@ -20,37 +20,27 @@
     <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/font-awesome/css/font-awesome.min.css') }}">
     <!-- animate css-- -->
     <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/animate.css/animate.min.css') }}">
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i" rel="stylesheet">
+    
     <!-- AOS Animate -->
     <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/aos/dist/aos.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url('/public/node_modules/flag-icon-css/css/flag-icon.min.css') }}">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <style type="text/css">
         *{
-            font-family: 'Lato', sans-serif;
-            font-family: 'khmer os content', sans-serif;
-            font-weight: 300;
+           /* font-family: 'Lato';*/
+           
         }
     	a{
     		text-decoration: none;
-    		color: #ffffff;
     	}
         a:hover{
             color: Orange;
             text-decoration: none;
         }
-    	.header{
-    		width: 100%;
-    		background: #fff;
-    		z-index: 100;
-    		float: left;
-			border-bottom: dotted 2px #fff;
-    	}
-    	.header_left{
-            display: flex;
-    		width: 30%;
-    		float: left;
-    	}
+    	
+    	
     	.logo{
             width: 100%;
     		float: left;
@@ -60,12 +50,6 @@
     		color: Orange;
     		padding-right: 15px;
     		float: right;
-    	}
-    	.header_right{
-            position: relative;
-    		width: 70%;
-    		padding-right: 5%;
-    		float: left;
     	}
         .social_link_header{
                 padding-bottom: 55px;
@@ -221,52 +205,64 @@
     </style>
     @yield('head')
 </head>
-<body>
-   
-
-    <div class="header">
-        <div class="con">
-    	<div class="header_left">
-    		<div class="logo">
-                <a href="{{ url('/') }}">
-    		      <img src="{{ url('/public/node_modules/logo/logo.png') }}" style="width: 90%" class="img-fluid">
+<body style="padding:0px; margin:0px; background-color:#fff;font-family:arial,helvetica,sans-serif,verdana,'Open Sans'">
+   <div class="container-fluid">
+       <div class="row">
+        <div class="col-12 col-sm-4"></div>
+           <div class="col-12 col-sm-4">
+               <a href="{{ url('/') }}">
+                  <img src="{{ url('/public/node_modules/logo/logo.png') }}" style="width: 90%" class="img-fluid">
                 </a>
-    		</div>
-    		
-    	</div>
-    	<div class="header_right">
-            <div class="menu_bar">
-                
-            </div>
-            <div class="social_link social_link_header text-right" style="margin: auto;">
-                <a href="#" class="text-warning float-left menu_bar"><i class="fa fa-bars fa-times"></i></a>
-                <a href="https://www.fb.com/" class="text-secondary"><i class="fa fa-tripadvisor"></i></a>
-                <a href="https://www.fb.com/" class="text-primary"><i class="fa fa-facebook-square"></i></a>
-                <a href="#" class="text-danger"><i class="fa fa-instagram"></i></a>
-                <a href="#" class="text-info"><i class="fa fa-twitter-square"></i></a>
-                <a href="#" class="text-warning"><i class="fa fa-google"></i></a>
-            </div>
+           </div>
+           <div class="col-12 col-sm-3"></div>
+           <div class="col-12 col-sm-1 d-none">
+               <a href="https://www.tripadvisor.com/Restaurant_Review-g293940-d1597237-Reviews-Flavours_of_India-Phnom_Penh.html" target="_blank" class="text-secondary"><i class="fa fa-tripadvisor"></i></a>
+                <a href="https://www.facebook.com/Flavors-of-India-404420972998824/" class="text-primary" target="_blank"><i class="fa fa-facebook-square"></i></a>
+           </div>
+       </div>
+       
+   </div>
 
-    		<ul class="main_menu">
-    			<li class=""><a href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a></li>
-                <li class=""><a href="{{ url('about-us') }}"><i class="fa fa-info-circle1"></i> About Us</a></li>
-    			<li class=""><a href="{{ url('/special-offer') }}"><i class="fa fa-bed1"></i> Our Special</a></li>
-    			<li class=""><a href="{{ url('/menu') }}"><i class="fa fa-image1"></i> Menu</a></li>
-                <li class=""><a href="{{ url('/gallery') }}"><i class="fa fa-address-book1"></i> Gallery</a></li>
-    			<li class=""><a href="{{ url('/branches') }}"><i class="fa fa-address-book1"></i> Our Branches</a></li>
-    		</ul>
-    	</div>
-    		
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="d-block d-sm-none">
+
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g293940-d1597237-Reviews-Flavours_of_India-Phnom_Penh.html" target="_blank" class="text-secondary h1"><i class="fa fa-tripadvisor"></i></a>
+        &nbsp;
+        <a href="https://www.facebook.com/Flavors-of-India-404420972998824/" class="text-primary h1" target="_blank"><i class="fa fa-facebook-square"></i></a>
+
     </div>
-</div>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 justify-content-center">
+        <li class="nav-item text-center"><a class="nav-link font-weight-bold" href="{{ url('/') }}"><i class="fa fa-home"></i> Home</a></li>
+        <li class="nav-item text-center"><a class="nav-link font-weight-bold" href="{{ url('about-us') }}"><i class="fa fa-info-circle1"></i> About Us</a></li>
+        <li class="nav-item text-center"><a class="nav-link font-weight-bold" href="{{ url('/special-offer') }}"><i class="fa fa-bed1"></i> Our Special</a></li>
+        <li class="nav-item text-center"><a class="nav-link font-weight-bold" href="{{ url('/menu') }}"><i class="fa fa-image1"></i> Menu</a></li>
+        <li class="nav-item text-center"><a class="nav-link font-weight-bold" href="{{ url('/gallery') }}"><i class="fa fa-address-book1"></i> Gallery</a></li>
+        <li class="nav-item text-center"><a class="nav-link font-weight-bold" href="{{ url('/branches') }}"><i class="fa fa-address-book1"></i> Our Branches</a></li>
+    </ul>
+    <div class="d-none d-sm-block">
+
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g293940-d1597237-Reviews-Flavours_of_India-Phnom_Penh.html" target="_blank" class="text-secondary h1"><i class="fa fa-tripadvisor"></i></a>
+        &nbsp;
+        <a href="https://www.facebook.com/Flavors-of-India-404420972998824/" class="text-primary h1" target="_blank"><i class="fa fa-facebook-square"></i></a>
+
+    </div>
+  </div>
+  
+</nav>
+
+   
 <div class="body">
 	@yield('slide')
 	@yield('body')
 </div>
 <div class="footer">
-	<div class="container">
+	<!-- <div class="container">
 		<div class="row card-body">
-			<!-- <div class="col-12 col-sm-6 order-sm-1   col-md-4">
+			<div class="col-12 col-sm-6 order-sm-1   col-md-4">
 				<div class="footer_title text-warning skiptranslate">Flavor Of India</div>
                 <ul class="nav">
                     <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-map"></i> 
@@ -277,7 +273,7 @@
                      <li class="nav-item"><a href="tel: +855 855 855 855" class="nav-link"><i class="fa fa-fax"></i> +855 855 855 855</a></li>
                      <li class="nav-item"><a href="meailto: Email@websitename.com" class="nav-link"><i class="fa fa-envelope"></i> Email@websitename.com</a></li>
                 </ul>
-			</div> -->
+			</div>
 			<div class="col-12 col-sm-12 order-1 order-sm-3  col-md-3">
 				<div class="footer_title text-warning">Pages</div>
 				<ul style="list-style: none;" class="nav flex-column">
@@ -330,16 +326,29 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="footer_bottom">
 		<code class="font-weight-bold text-light">Flavors Of India Asia &copy{{ Date('Y')}} All Right Reserve</code>        
 	</div>
     
 </div>
+<style type="text/css">
+    .gotop{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        z-index: 2;
+    }
+</style>
+
+    <button class="gotop"><i class="fa fa-arrow-up"></i></button>
 
     
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+   <!--  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ -->
 
 
     <!-- <script type="text/javascript">
@@ -390,5 +399,11 @@ new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_el
             $('.goog-close-link').trigger('click')
         })
 
+
+        $(".gotop").click( function(){
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        });
     </script>
+
+</body>
 </html>

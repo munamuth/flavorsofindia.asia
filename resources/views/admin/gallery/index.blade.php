@@ -38,21 +38,68 @@
 			</div>	
 		</div>		
 	</div>
+	<div id="accordion">
+	@foreach( $year as $y)
+	<div class="row">
+		<div class="col">
+			@foreach( $y["month"] as $month )
+				
+				<div class="card">					
+					
+					@if($month == 01 )
+					    <div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"January ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@elseif($month == 02 )
+						<div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"February ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@elseif($month == 03 )
+						<div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"March ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@elseif($month == 04 )
+						<div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"April ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@elseif($month == 05 )
+						<div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"May ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@elseif($month == 06 )
+						<div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"June ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@elseif($month == 07 )
+						<div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"July ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@elseif($month == "08" )
+						<div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"August ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@elseif($month == "09" )
+						<div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"September ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@elseif($month == 10 )
+						<div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"October ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@elseif($month == 11 )
+						<div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"November ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@elseif($month == 12 )
+						<div class="card-header h4" data-toggle="collapse" data-target="#collapse{{$month.$y['year']}}">{{"December ".$y["year"]}} <span class="float-right dropdown-toggle"></span></div>
+					@endif      
+					
+									
+					<div id="collapse{{$month.$y['year']}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+						<div class="card-body">
+							<div class="row">
+								@foreach( App\Gallery::whereMonth("created_at", $month)->whereYear('created_at', $y)->orderBy('created_at', "desc")->get() as $gallery )
+								<div class="col-6 col-sm-3 zoom" style="margin-bottom: 30px">
+									<img src="{{ url('public/node_modules/image/gallery/'.$gallery->photo) }}" class="img-fluid">
 
-	<div class="row card-body">
-		@foreach( $gallery as $g)
-		<div class="col-6 col-sm-3 zoom" style="margin-bottom: 30px">
-			<img src="{{ url('public/node_modules/image/gallery/'.$g->photo) }}" class="img-fluid">
-			<div class="action_button">
-				<button class="btn btn-danger btn-sm" onclick="btnChange_click({{ $g->id}})"><i>Change</i></button>
-				<button class="btn btn-danger btn-sm" onclick="btnRemove_click({{ $g->id }})"><i>Remove</i></button>
-			</div>
+									<div class="action_button">
+										<button class="btn btn-danger btn-sm" onclick="btnChange_click({{ $gallery->id}})"><i>Change</i></button>
+										<button class="btn btn-danger btn-sm" onclick="btnRemove_click({{ $gallery->id }})"><i>Remove</i></button>
+									</div>
+								</div>	
+								@endforeach
+							</div>						
+						</div>
+					</div>
+				</div>
+				
+			@endforeach
 		</div>
-		@endforeach
+	</div>
+	@endforeach
 	</div>
 	
-	
 </div>
+
+
 
 
 <form action="{{ route('gallery.store') }}" method="post" id="form_store" class="d-none" enctype="multipart/form-data">

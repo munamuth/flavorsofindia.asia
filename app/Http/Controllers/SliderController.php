@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Image;
 use Carbon\Carbon;
+use File;
 class SliderController extends Controller
 {
     /**
@@ -42,7 +43,7 @@ class SliderController extends Controller
        
         if( $request->hasFile('file') ){
             foreach( $file as $f ){
-                $imageName = ImageUpload::imageUpload('/public/node_modules/image/slider', $f, 800, 300);
+                $imageName = ImageUpload::imageUpload('public/node_modules/image/slider', $f, 1366, 768);
                 // open file a image resource
                /*  $img = Image::make('public/storage/'.$path);
 
@@ -91,7 +92,7 @@ class SliderController extends Controller
         if( $request->hasFile('file') ){
             File::delete("public/node_modules/image/slider/".$slider->name);
             
-            $imageName = ImageUpload::imageUpload('public/node_modules/image/slider', $request->file, 800, 300);
+            $imageName = ImageUpload::imageUpload('public/node_modules/image/slider', $request->file, 1366, 768);
                 
 
                 Slider::where('id', $slider->id)->update(['name' => $imageName,'status_id' => 1, 'created_at' => Carbon::now(), 'updated_at' => Carbon::now() ]);

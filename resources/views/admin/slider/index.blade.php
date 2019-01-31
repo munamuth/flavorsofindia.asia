@@ -30,7 +30,7 @@
 				<div class="card-body">
 						<div class="text-right">
 							<button  class="btn btn-primary btn-sm" id="btnAdd"><i class="fa  fa-plus"></i> Add</button>
-							<a href="#" title="Recommanded size: 800 x 350"><i class="fa fa-question"></i></a>
+							<a href="#" title="Recommanded size: 1366 x 1024"><i class="fa fa-question"></i></a>
 						</div>
 				</div>
 			</div>
